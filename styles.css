@@ -120,7 +120,7 @@ html, body{
 
 .gallery-section{
     display: flex;
-    padding: 50px 0 0;
+    padding: 50px 0 50px;
 }
 
 .picture-container{
@@ -151,14 +151,65 @@ html, body{
 #img4 { grid-column: 2; grid-row: 2; }
 #img5 { grid-column: 1 / span 2; grid-row: 3; }
 
-.insta-footer{
-    padding: 10em;
-    text-align: center;
+.insta-footer {
+    position: relative;
+    margin: auto;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    padding-bottom: 2em;
 }
 
-.insta-footer:hover{
-    background-color: rgba(99, 99, 99, 0.436);
+.insta-link-grid {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 80em;
 }
+
+.insta-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+    width: 100%;
+}
+
+.insta-grid img {
+    object-fit: cover;
+    width: 100%;
+    transition: opacity 0.3s ease;
+}
+
+.insta-footer:hover .insta-grid img {
+    opacity: 0.5; /* Fade images */
+}
+
+.insta-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.insta-footer:hover .insta-icon {
+    display: block;
+    opacity: 1; /* Make icon visible */
+}
+
+#insta1 {grid-column: 1; grid-row: 1;}
+#insta2 {grid-column: 2; grid-row: 1;}
+#insta3 {grid-column: 3; grid-row: 1;}
+#insta4 {grid-column: 4; grid-row: 1;}
+#insta5 {grid-column: 5; grid-row: 1;}
+#insta6 {grid-column: 6; grid-row: 1;}
 
 @media (min-width: 768px){
     .picture-container{
