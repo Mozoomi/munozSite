@@ -11,11 +11,13 @@ a{
     color: white;
 }
 
-.background-image{
+.background-image {
     height: 100vh;
-    background: url('../images/b_soccer_v/b_soccer_v1.jpg') no-repeat center center fixed;
+    width: 100%;
     background-size: cover;
-    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out;
 }
 
 .second-nav {
@@ -42,6 +44,10 @@ a{
 .second-nav .nav-options{
     margin-left: .5em;
     padding: .5em;
+}
+
+#second-h3{
+    color: black;
 }
 
 .top-nav{
@@ -89,7 +95,7 @@ a{
     transition: opacity 0.3s ease, visibility 0s 0.3s, transform 0.3s ease;
 }
 
-.submenu a {
+.submenu a{
     display: block;
     padding: 8px 12px;
     color: black;
